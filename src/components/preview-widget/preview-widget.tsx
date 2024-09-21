@@ -16,6 +16,7 @@ export default function PreviewWidget() {
 					{type === 'headline' && <h1 className='text-[#252A32] font-[700] text-[22px] max-w-[500px]'>{content}</h1>}
 					{type === 'paragraph' && <p className='text-[#97AACD] font-[400] text-[14px] text-center text-balance max-w-[500px]'>{content}</p>}
 					{type === 'button' && <Button className='bg-[#4368E0]'>{content}</Button>}
+					{/* eslint-disable-next-line */}
 					{type === 'image' && <img src={content} alt='image' />}
 				</div>
 			))}
