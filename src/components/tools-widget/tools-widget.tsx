@@ -35,7 +35,12 @@ export default function ToolsWidget() {
 	console.log(activeBlockId)
 
 	return (
-		<section className='w-full max-w-[538px] flex flex-col justify-start items-center h-[50%] flex-1 overflow-y-auto md:max-h-[calc(100svh-110px)] py-5'>
+		<section className='relative w-full max-w-[538px] flex flex-col justify-start items-center max-md:h-[50%] flex-1 overflow-y-auto md:max-h-[calc(100svh-110px)] py-5'>
+			{currentBlocks.length === 0 && (
+				<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center '>
+					No blocks added yet
+				</div>
+			)}
 			<Accordion
 				type='single'
 				collapsible
